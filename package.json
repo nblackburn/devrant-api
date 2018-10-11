@@ -1,0 +1,36 @@
+{
+    "name": "devrant-api",
+    "description": "Unoffical wrapper for the devRant API.",
+    "version": "1.1.0",
+    "license": "MIT",
+    "main": "./source/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nblackburn/devrant-api.git"
+    },
+    "scripts": {
+        "lint": "eslint source",
+        "test": "jest",
+        "coverage": "jest --coverage"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "qs": "^6.5.2"
+    },
+    "devDependencies": {
+        "dotenv": "^6.1.0",
+        "eslint": "^5.6.1",
+        "jest": "^23.6.0",
+        "nock": "^10.0.1"
+    },
+    "jest": {
+        "verbose": true,
+        "automock": false,
+        "testEnvironment": "node",
+        "testRegex": "test/(.*).js$",
+        "testPathIgnorePatterns": [
+            "/test/fixtures/",
+            "/node_modules/"
+        ]
+    }
+}
