@@ -3,7 +3,7 @@
     "description": "Unoffical wrapper for the devRant API.",
     "version": "1.1.0",
     "license": "MIT",
-    "main": "./source/index.js",
+    "main": "./src/index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/nblackburn/devrant-api.git"

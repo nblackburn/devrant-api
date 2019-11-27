@@ -1,5 +1,5 @@
 const nock = require('nock');
-const DevRant = require('../source');
+const DevRant = require('../src');
 
 describe('/rants', () => {
     let client = null;

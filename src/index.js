@@ -7,9 +7,9 @@ const AvatarsEndpoint = require('./endpoints/avatars');
 /**
  */
 class DevRant {
-    constructor () {
+    constructor() {
         this.api = axios.create({
-            baseURL: 'https://www.devrant.com/api'
+            baseURL: 'https://www.devrant.com/api',
         });
 
         this.rants = new RantsEndpoint(this.api);
@@ -32,9 +32,9 @@ class DevRant {
 
     /**
      * A hook fired before each request.
-     * 
+     *
      * @param {Function} callback
-     * 
+     *
      * @return {Promise}
      */
     beforeEach(callback) {
@@ -45,9 +45,9 @@ class DevRant {
 
     /**
      * A hook fired after each request.
-     * 
+     *
      * @param {Function} callback
-     * 
+     *
      * @return {Promise}
      */
     afterEach(callback) {
@@ -63,10 +63,12 @@ class DevRant {
      *
      * @return {Promise}
      */
-    search (parameters) {
-        return this.api.get('devrant/search', qs.stringify(parameters)).then(response => {
-            return response.data.results;
-        });
+    search(parameters) {
+        return this.api
+            .get('devrant/search', qs.stringify(parameters))
+            .then(response => {
+                return response.data.results;
+            });
     }
 
     /**
@@ -76,10 +78,12 @@ class DevRant {
      *
      * @return {Promise}
      */
-    searchTags (parameters) {
-        return this.api.get('devrant/search/tags', qs.stringify(parameters)).then(response => {
-            return response.data.tags;
-        });
+    searchTags(parameters) {
+        return this.api
+            .get('devrant/search/tags', qs.stringify(parameters))
+            .then(response => {
+                return response.data.tags;
+            });
     }
 
     /**
@@ -87,10 +91,12 @@ class DevRant {
      *
      * @return {Promise}
      */
-    weeklyRants (parameters) {
-        return this.api.get('devrant/weekly-rants', qs.stringify(parameters)).then(response => {
-            return response.data.rants;
-        });
+    weeklyRants(parameters) {
+        return this.api
+            .get('devrant/weekly-rants', qs.stringify(parameters))
+            .then(response => {
+                return response.data.rants;
+            });
     }
 
     /**
@@ -100,10 +106,12 @@ class DevRant {
      *
      * @return {Promise}
      */
-    storyRants (parameters) {
-        return this.api.get('devrant/story-rants', qs.stringify(parameters)).then(response => {
-            return response.data.rants;
-        });
+    storyRants(parameters) {
+        return this.api
+            .get('devrant/story-rants', qs.stringify(parameters))
+            .then(response => {
+                return response.data.rants;
+            });
     }
 
     /**
@@ -113,10 +121,12 @@ class DevRant {
      *
      * @return {Promise}
      */
-    weeklyList (parameters) {
-        return this.api.get('devrant/weekly-list', qs.stringify(parameters)).then(response => {
-            return response.data.weeks;
-        });
+    weeklyList(parameters) {
+        return this.api
+            .get('devrant/weekly-list', qs.stringify(parameters))
+            .then(response => {
+                return response.data.weeks;
+            });
     }
 
     /**
@@ -126,10 +136,12 @@ class DevRant {
      *
      * @return {Promise}
      */
-    collabs (parameters) {
-        return this.api.get('devrant/collabs', qs.stringify(parameters)).then(response => {
-            return response.data.rants;
-        });
+    collabs(parameters) {
+        return this.api
+            .get('devrant/collabs', qs.stringify(parameters))
+            .then(response => {
+                return response.data.rants;
+            });
     }
 
     /**
@@ -139,10 +151,12 @@ class DevRant {
      *
      * @return {Promise}
      */
-    rantDiscussions (parameters) {
-        return this.api.get('devrant/rant-discussions', qs.stringify(parameters)).then(response => {
-            return response.data.rants;
-        });
+    rantDiscussions(parameters) {
+        return this.api
+            .get('devrant/rant-discussions', qs.stringify(parameters))
+            .then(response => {
+                return response.data.rants;
+            });
     }
 
     /**
@@ -152,11 +166,13 @@ class DevRant {
      *
      * @return {Promise}
      */
-    supporters (parameters) {
-        return this.api.get('devrant/supporters', qs.stringify(parameters)).then(response => {
-            return response.data.items;
-        });
+    supporters(parameters) {
+        return this.api
+            .get('devrant/supporters', qs.stringify(parameters))
+            .then(response => {
+                return response.data.items;
+            });
     }
-};
+}
 
 module.exports = DevRant;
