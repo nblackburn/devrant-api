@@ -1,9 +1,9 @@
 /**
  */
 class Endpoint {
-    constructor (api) {
+    constructor(api) {
         this.api = api;
     }
-};
+}
 
 module.exports = Endpoint;

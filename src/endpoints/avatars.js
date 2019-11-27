@@ -11,11 +11,13 @@ class Avatar extends Endpoint {
      *
      * @return {Promise}
      */
-    build (parameters) {
-        return this.api.get('devrant/avatars/build', qs.stringify(parameters)).then(response => {
-            return response.data.avatars;
-        });
+    build(parameters) {
+        return this.api
+            .get('devrant/avatars/build', qs.stringify(parameters))
+            .then(response => {
+                return response.data.avatars;
+            });
     }
-};
+}
 
 module.exports = Avatar;
